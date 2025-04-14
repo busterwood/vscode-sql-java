@@ -8,7 +8,7 @@
   "displayName": "SQL Java",
   "icon": "images/sql-java.png",
   "description": "Syntax highlighting for SQL within Java strings.",
-  "publisher": "busterwood",
+  "publisher": "chrisjaustin",
   "categories": [
     "Programming Languages",
     "Themes"
@@ -37,5 +37,12 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/busterwood/vscode-sql-java"
+  },
+  "devDependencies": {
+    "vsce": "^2.15.0"
+  },
+  "scripts": {
+    "build": "vsce package --out sql-java.vsix",
+    "publish": "vsce publish"
   }
 }
