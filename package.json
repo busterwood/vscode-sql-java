@@ -1,0 +1,41 @@
+{
+  "name": "vscode-sql-java",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.22.0"
+  },
+  "license": "MIT",
+  "displayName": "SQL Java",
+  "icon": "images/sql-java.png",
+  "description": "Syntax highlighting for SQL within Java strings.",
+  "publisher": "busterwood",
+  "categories": [
+    "Programming Languages",
+    "Themes"
+  ],
+  "keywords": [
+    "syntax",
+    "highlighting",
+    "sql",
+    "java"
+  ],
+  "contributes": {
+    "grammars": [
+      {
+        "injectTo": [
+          "source.java",
+          "text.html.markdown"
+        ],
+        "scopeName": "inline.sql-java",
+        "path": "./syntaxes/sql-java.json",
+        "embeddedLanguage1": {
+          "meta.embedded.block.sql": "sql"
+        }
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/busterwood/vscode-sql-java"
+  }
+}
