@@ -5,7 +5,9 @@ Syntax highlighting for SQL strings in Java.
 
 ## Main Features
 
-SQL syntax highlighting is triggered a string is preceded by a `/*sql*/` comment.
+SQL syntax highlighting is triggered when a string is preceded by a `/*sql*/` comment.
+
+![Preview](https://raw.githubusercontent.com/busterwood/vscode-sql-java/main/images/example.png)
 
 ## File Types
 
