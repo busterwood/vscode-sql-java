@@ -1,0 +1,49 @@
+{
+  "scopeName": "inline.html-java",
+  "fileTypes": [],
+  "injectionSelector": "L:source -comment -string, L:markup.fenced_code.block.markdown (meta.embedded.block.java)",
+  "patterns": [
+    {
+      "comment": "comment prefixed multi-line string",
+      "begin": "(/\\*\\s*html\\s*\\*/)(\\\"{3})",
+      "beginCaptures": {
+        "1": {
+          "name": "comment.block.java"
+        },
+        "2": {
+          "name": "punctuation.definition.string.begin.java string.quoted.triple.java"
+        }
+      },
+      "end": "(\\\"{3})",
+      "endCaptures": {
+        "1": {
+          "name": "punctuation.definition.string.end.java string.quoted.triple.java"
+        }
+      },
+      "patterns": [
+        { "include": "text.html.derivative" }
+      ]
+    },
+    {
+      "comment": "comment prefixed string",
+      "begin": "(/\\*\\s*html\\s*\\*/)(\\\")",
+      "beginCaptures": {
+        "1": {
+          "name": "comment.block.java"
+        },
+        "2": {
+          "name": "string.quoted.double.java"
+        }
+      },
+      "end": "(\\\")",
+      "endCaptures": {
+        "1": {
+          "name": "punctuation.definition.string.end.java string.quoted.double.java"
+        }
+      },
+      "patterns": [
+        { "include": "text.html.derivative" }
+      ]
+    }
+  ]
+}

@@ -1,13 +1,13 @@
 {
   "name": "vscode-sql-java",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "engines": {
     "vscode": "^1.22.0"
   },
   "license": "MIT",
   "displayName": "SQL Java",
   "icon": "images/sql-java.png",
-  "description": "Syntax highlighting for SQL within Java strings.",
+  "description": "Syntax highlighting for SQL (and HTML) within Java strings.",
   "publisher": "chrisjaustin",
   "categories": [
     "Programming Languages",
@@ -17,6 +17,7 @@
     "syntax",
     "highlighting",
     "sql",
+    "html",
     "java"
   ],
   "contributes": {
@@ -30,6 +31,16 @@
         "path": "./syntaxes/sql-java.json",
         "embeddedLanguage1": {
           "meta.embedded.block.sql": "sql"
+        }
+      },
+      {
+        "injectTo": [
+          "source.java"
+        ],
+        "scopeName": "inline.html-java",
+        "path": "./syntaxes/html-java.json",
+        "embeddedLanguage1": {
+          "meta.embedded.block.html": "html"
         }
       }
     ]
